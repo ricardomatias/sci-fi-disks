@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sci-fi Disks</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<button type="button" name="shortcuts" class="btn-shortcuts clutter" onclick="Helpers.toggleOverlay()">?</button>
+
+<div class="overlay-container">
+	<div class="overlay hidden">
+		<h3>shortcuts</h3>
+		<div class="inner-overlay">
+			<ul>
+				<li><code>w</code></li>
+				<li><code>s</code></li>
+				<li><code>r</code></li>
+				<li><code>h</code></li>
+				<li><code>space</code></li>
+				<li><code>enter</code></li>
+			</ul>
+			<ul>
+				<li>previous preset</li>
+				<li>next preset</li>
+				<li>random preset</li>
+				<li>zen mode</li>
+				<li>change colorscheme</li>
+				<li>take a screenshot</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+	<a href="http://ricardomatias.net" class="website-link clutter">ricardomatias.net</a>
+
+	<a class="github-link clutter" href="https://github.com/ricardomatias/sci-fi-disks" target="_blank">
+		<img src="assets/img/github-link.png" alt="GitHub Logo">
+	</a>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+
+
+	<script type="text/javascript" src="src/core/event-bus.js"></script>
+	<script type="text/javascript" src="src/core/sketch.js"></script>
+	<script type="text/javascript" src="src/core/presets-manager.js"></script>
+	<script type="text/javascript" src="src/core/palette-studio.js"></script>
+	<script type="text/javascript" src="src/tools/helpers.js"></script>
+	<script type="text/javascript" src="src/tools/math-utils.js"></script>
+	<script type="text/javascript" src="src/tools/master-clock/index.js"></script>
+	<script type="text/javascript" src="src/tools/agent.js"></script>
+	<script type="text/javascript" src="src/tools/bpm-detector/index.js"></script>
+	<script type="text/javascript" src="src/index.js"></script>
+	<script type="text/javascript">
+		(function() {
+			window.addEventListener('touchstart', function(evt) {
+				if (evt.target && evt.target.href) {
+					evt.preventDefault();
+
+					evt.target.target = '_self';
+
+					evt.target.click();
+				}
+			});
+		})();
+	</script>
+</body>
+</html>

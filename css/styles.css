@@ -1,0 +1,100 @@
+* {
+  font-family: 'Roboto Mono', Menlo, Lato, monospace;
+  box-sizing: border-box;
+  user-select: none !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+  display: flex;
+  height: 100vh;
+}
+
+canvas {
+  margin: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.github-link {
+	position: fixed;
+	bottom: 3px;
+	right: 3px;
+  padding: 7px;
+}
+
+.github-link img {
+  width: 20px;
+}
+
+.website-link {
+	color: white;
+	position: fixed;
+	bottom: 16px;
+	left: 10px;
+	text-decoration: none;
+  letter-spacing: 1.5px;
+  font-size: 10px;
+}
+
+.btn-shortcuts {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1000;
+
+  transition: transform 0.25s;
+}
+
+.btn-shortcuts:hover {
+  transform: scale3d(1.4, 1.4, 1.4);
+}
+
+.overlay-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  font-size: 11px;
+}
+
+.overlay {
+  color: white;
+}
+
+.overlay ul {
+  list-style: none;
+  margin: 0;
+  margin-right: 20px;
+  padding: 0;
+}
+
+.overlay h3 {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.inner-overlay {
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-shortcuts {
+    display: none;
+  }
+}
